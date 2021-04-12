@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OwnAndroid.Layout.Login_Page"
+             NavigationPage.HasNavigationBar="False"
+               BackgroundColor="#3333cc"
+             >
+    <ContentPage.Content>
+        <Grid >
+            <StackLayout Padding="0" Margin="0">
+            
+                        <Image Source="Back_found.jpg" Aspect="AspectFill" HeightRequest="130" HorizontalOptions="FillAndExpand" />
+
+              
+                
+                
+                
+            </StackLayout>
+            <StackLayout Margin="15,110,15,0">
+                <Frame BackgroundColor="White" CornerRadius="10" HasShadow="True" HeightRequest="360" HorizontalOptions="FillAndExpand" >
+                <StackLayout Spacing="20">
+
+                      
+
+                            <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label Text="Signin" TextColor="Black" FontSize="Medium" FontAttributes="Bold" />
+
+                    </StackLayout>
+                    <StackLayout Margin="0,25,0,0">
+                        <!-- Login InPuts-->
+                            <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+                                    <Frame BackgroundColor="LightGray" CornerRadius="50" HeightRequest="30" WidthRequest="30" Padding="0" Margin="7,7,0,7">
+                                        <Image Source="Email_Icon.png" Aspect="AspectFill" />
+
+                                    </Frame>
+                                    <Entry Placeholder="Email"  VerticalOptions="EndAndExpand" x:Name="Entry_Email" TextColor="HotPink" HorizontalOptions="FillAndExpand" Margin="0,0,15,0" />
+
+                                </StackLayout>
+                            
+                               <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+                                    <Frame BackgroundColor="LightGray" CornerRadius="50" HeightRequest="30" WidthRequest="30" Padding="0" Margin="7,7,0,7">
+
+                                        <Image Source="password.png" Aspect="AspectFill" />
+
+                                    </Frame>
+                                    <Entry Placeholder="Password"  VerticalOptions="EndAndExpand" x:Name="Entry_Password" IsPassword="True" TextColor="HotPink" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" />
+
+                                </StackLayout>
+
+                           
+
+
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox IsChecked="False" Color="Purple" />
+                            <Label Text="Remember me" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+                            <Label Text="Forgot Password" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" >
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Forgot_passwprd_Tapped"  NumberOfTapsRequired="1" />
+
+                                </Label.GestureRecognizers>
+                                
+                            </Label>
+
+                            
+
+                        </StackLayout>
+                      
+                        <Button Text="SIGN IN" x:Name="Sign_In" HeightRequest="40" Clicked="Sign_In_Clicked" BackgroundColor="Purple" TextColor="White" FontAttributes="Bold" CornerRadius="20" />
+
+                        <StackLayout Orientation="Horizontal" >
+
+                            <Label Text="Have No Account" HorizontalTextAlignment="Start" FontSize="16" VerticalTextAlignment="Center" />
+
+                            <Label Text="Sign up" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" >
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Sign_up_Tapped" NumberOfTapsRequired="1" />
+                                </Label.GestureRecognizers>
+
+                            </Label>
+                        </StackLayout>
+
+
+
+
+
+
+
+                    </StackLayout>
+
+
+                </Frame>
+
+
+            </StackLayout>
+          
+            
+            
+        </Grid>
+        
+        
+        
+    </ContentPage.Content>
+</ContentPage>

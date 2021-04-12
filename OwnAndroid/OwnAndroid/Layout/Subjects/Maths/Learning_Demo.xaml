@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+        
+                 xmlns:buttons="clr-namespace:Syncfusion.Buttons.XForms.SfChip;assembly=Syncfusion.Buttons.XForms" xmlns:buttons1="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+                xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             
+             
+             
+             x:Class="OwnAndroid.Layout.Subjects.Maths.Learning_Demo">
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical" Spacing="20">
+            <yummy:PancakeView BackgroundGradientStartPoint="0.0,0.0" BackgroundGradientEndPoint="1.0,1.0">
+                <yummy:PancakeView.BackgroundGradientStops>
+                    <yummy:GradientStopCollection>
+                        <yummy:GradientStop Color="#006400" Offset="0.0" />
+                        <yummy:GradientStop Color="#006400" Offset="1.0" />
+
+
+                    </yummy:GradientStopCollection>
+
+
+                </yummy:PancakeView.BackgroundGradientStops>
+
+                <StackLayout Orientation="Horizontal" HeightRequest="30" >
+                   
+                    
+                
+
+                <Grid Margin="100,0,50,0" HorizontalOptions="Center" ColumnSpacing="20" >
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+
+
+                    </Grid.ColumnDefinitions>
+                    
+                    <Frame x:Name="Frame_Steps" Padding="0" Grid.Column="0"  BackgroundColor="Transparent" >
+
+                        <Label Text="Steps" FontSize="15" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                        
+                    </Frame>
+                    <Frame x:Name="Frame_Challenge" Padding="0" Grid.Column="1" BackgroundColor="Transparent">
+
+                        <Label Text="Question" FontSize="15" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+                    </Frame>
+
+
+
+                </Grid>
+
+               
+
+
+            </StackLayout>
+            </yummy:PancakeView>
+
+            <!-- Context-->
+
+            <border:SfBorder  HasShadow="True" ShadowColor="Black"  Margin="10" BorderWidth="0" CornerRadius="0,15,15,15">
+                
+                
+                
+           
+            
+            
+            <Frame Padding="0" Margin="16"  >
+                <StackLayout Orientation="Vertical" Spacing="20" >
+                    <Label Text="Topic to be presented" FontSize="23"  TextColor="Black" />
+
+                    <Label Text="The text to be presented here is the description of the step to be configed later on and this is vital to the conditions" 
+                           TextColor="Black"
+                           FontSize="17"
+                           LineBreakMode="WordWrap" />
+
+                    
+                    <!-- Alert Hint and trick-->
+                    
+                    
+                    
+
+                    <Frame Padding="0" >
+                            <yummy:PancakeView BackgroundGradientStartPoint="0.0,0.0" BackgroundGradientEndPoint="1.0,1.0">
+                                <yummy:PancakeView.BackgroundGradientStops>
+                                    <yummy:GradientStopCollection>
+                                        <yummy:GradientStop Color="White" Offset="0.0" />
+                                        <yummy:GradientStop Color="#f0e68c" Offset="0.3" />
+                                        <yummy:GradientStop Color="#f0e68c" Offset="1.0" />
+
+
+                                    </yummy:GradientStopCollection>
+                                    
+                                    
+                                </yummy:PancakeView.BackgroundGradientStops>
+                                
+                                
+                           
+                        
+                   
+                        <Grid    >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5" />
+                                <ColumnDefinition Width="30" />
+                                <ColumnDefinition Width="*" />
+
+                            </Grid.ColumnDefinitions>
+                            
+                            
+                             <BoxView BackgroundColor="Green"   Grid.Column="0"/>
+
+                              <Grid   Grid.Column="1"  >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="30" />
+
+                                        </Grid.ColumnDefinitions>
+                                          
+                                  
+                                  
+                              <Image Source="alert_diamond.png" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  />
+                            
+                            
+
+
+                                 </Grid>
+
+                            <Label  Text="The text to be displayed here is a hint or trick" 
+                                   Grid.Column="2" 
+                                    Margin="16,0,0,0"
+                                   TextColor="Black"
+                                   FontSize="16" LineBreakMode="WordWrap" />
+
+
+
+
+
+                        </Grid>
+                            </yummy:PancakeView>
+
+                        </Frame>
+
+
+
+
+                </StackLayout>
+                
+                
+                
+                
+                
+                
+            </Frame>
+
+            </border:SfBorder>
+            <!-- Next controls-->
+            
+            
+            <Grid Margin="20" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="Auto" />
+
+
+                </Grid.ColumnDefinitions>
+                
+                
+                <Label TextColor="Black" FontSize="17" HorizontalOptions="Start"  Grid.Column="0">
+                    <Label.FormattedText>
+                        <FormattedString >
+                            <Span Text="321 " />
+                            <Span Text="COMMENTS" />
+
+                        </FormattedString>
+                        
+                    </Label.FormattedText>
+                    
+                    
+                </Label>
+
+
+                <buttons1:SfButton BackgroundColor="Green" Grid.Column="1" TextColor="White" Text="Continue" HorizontalOptions="End" WidthRequest="100" >
+                    
+                    
+                    
+                </buttons1:SfButton>
+                
+                
+            </Grid>
+                
+            
+            
+            
+            
+            
+        </StackLayout>
+    
+    
+    
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+              xmlns:buttons="clr-namespace:Syncfusion.Buttons.XForms.SfChip;assembly=Syncfusion.Buttons.XForms" xmlns:buttons1="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+         
+     
+           
+             x:Class="OwnAndroid.Layout.Subjects.Computer_application.Computer_PG">
+    <ContentPage.Content>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="180" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+
+
+
+            </Grid.RowDefinitions>
+
+            <Grid BackgroundColor="#455399" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <StackLayout Margin="0,-40,0,0" HorizontalOptions="Center" VerticalOptions="Center">
+
+                    <Label TextColor="white" FontSize="40" HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Comp" FontSize="40" TextColor="White" FontAttributes="Bold" />
+                                    <Span Text="uter" />
+
+                                </FormattedString.Spans>
+
+
+                            </FormattedString>
+
+                        </Label.FormattedText>
+
+
+                    </Label>
+                    <Label Text="Computer Application Technology" TextColor="White" FontSize="15" HorizontalTextAlignment="Center"/>
+
+
+
+
+                </StackLayout>
+
+
+
+
+
+            </Grid>
+
+
+
+            <CollectionView Grid.Row="2" Margin="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" SelectionMode="None" ItemsSource="{Binding Physics_topics}" >
+                <CollectionView.Header >
+                    <Label Text="Modules" TextColor="Black" FontSize="20" />
+
+
+                </CollectionView.Header>
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="20" />
+
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <yummy:PancakeView  BackgroundColor="White" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+
+                            <Grid VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+
+                                </Grid.ColumnDefinitions>
+
+                                <BoxView BackgroundColor="{Binding Color}" WidthRequest="3" HorizontalOptions="Start" VerticalOptions="FillAndExpand" />
+
+                                <Expander Grid.Column="1">
+                                    <Expander.Header>
+                                        <Grid HorizontalOptions="FillAndExpand">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="3.5*" />
+
+                                            </Grid.ColumnDefinitions>
+
+                                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+                                                <Label Text="Topics" TextColor="Black" FontSize="15" />
+                                                <Label Text="{Binding Topic_Number}" HorizontalOptions="Center" VerticalOptions="Center" />
+
+
+                                            </StackLayout>
+
+                                            <BoxView Grid.Column="1" BackgroundColor="Gray" WidthRequest="1" HorizontalOptions="Start" VerticalOptions="FillAndExpand" />
+                                            <StackLayout Grid.Column="2" HorizontalOptions="Start" VerticalOptions="Center" Margin="20">
+                                                <Label Text="{Binding Topic}" TextColor="Black" FontSize="20" />
+                                            </StackLayout>
+
+
+                                        </Grid>
+
+
+
+                                    </Expander.Header>
+                                    <StackLayout Orientation="Vertical" >
+                                        <Grid HorizontalOptions="FillAndExpand">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="3.5*" />
+
+                                            </Grid.ColumnDefinitions>
+
+                                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+                                                <Image Source="cog.png" Aspect="AspectFill"  HeightRequest="40"/>
+
+                                            </StackLayout>
+
+                                            <BoxView Grid.Column="1" BackgroundColor="Gray" WidthRequest="1" HorizontalOptions="Start" VerticalOptions="FillAndExpand" />
+                                            <StackLayout Grid.Column="2" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="5" HeightRequest="40">
+
+
+                                                <buttons1:SfButton Text="Start"  CornerRadius="10" BackgroundColor="#455399" HorizontalOptions="StartAndExpand" HeightRequest="40" WidthRequest="200" VerticalOptions="CenterAndExpand" TextColor="White" FontSize="20" VerticalTextAlignment="Center"   ShowIcon="False"    BorderColor="Black" BorderThickness="1"  PressedBackgroundColor="Blue"  >
+
+
+
+
+
+
+
+                                                </buttons1:SfButton>
+                                            </StackLayout>
+
+
+                                        </Grid>
+
+
+
+
+
+
+                                    </StackLayout>
+
+
+
+
+
+                                </Expander>
+
+                            </Grid>
+
+                        </yummy:PancakeView>
+
+
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+
+            </CollectionView>
+
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

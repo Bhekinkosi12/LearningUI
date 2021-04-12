@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="OwnAndroid.Layout.Side_Tyle_of_Learn"
+             
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="StackLayout" x:Key="StackLayout" >
+               
+                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="Spacing" Value="10" />
+
+
+
+
+            </Style>
+            <Style TargetType="StackLayout" x:Key="Stack_inner" >
+                <Setter Property="HeightRequest" Value="50" />
+
+
+            </Style>
+            <Style TargetType="StackLayout" x:Key="Stack_Description">
+                <Setter Property="Padding" Value="4" />
+
+            </Style>
+            
+            <Style TargetType="Label" x:Key="Title_Label" >
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="End" />
+                <Setter Property="FontSize" Value="36" />
+                <Setter Property="FontAttributes" Value="Bold" />
+
+
+
+            </Style>
+            <Style TargetType="Label" x:Key="Body_label" >
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="30" />
+                <Setter Property="TextDecorations" Value="None" />
+                <Setter Property="Padding" Value="4" />
+
+
+            </Style>
+
+            <Style TargetType="Frame" x:Key="Frame_style">
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="CornerRadius" Value="4" />
+                <Setter Property="BorderColor" Value="Transparent" />
+
+
+            </Style>
+            
+            
+            
+        </ResourceDictionary>
+        
+    </ContentPage.Resources>
+    
+    
+    
+    <ContentPage.Content>
+        <yummy:PancakeView BackgroundGradientStartPoint="0.1,0.8" BackgroundGradientEndPoint="0.8,0.1">
+            <yummy:PancakeView.BackgroundGradientStops >
+                <yummy:GradientStopCollection>
+                    <yummy:GradientStop Color="White" Offset="0.2" />
+                    <yummy:GradientStop Color="WhiteSmoke" Offset="0.3" />
+                    
+                    <yummy:GradientStop Color="LightGray" Offset="0.4" />
+                    <yummy:GradientStop Color="DarkGray" Offset="0.5" />
+                    <yummy:GradientStop Color="#808080" Offset="0.6" />
+                    <yummy:GradientStop Color="#696969" Offset="0.7" />
+                    <yummy:GradientStop Color="#585858" Offset="0.8" />
+
+                </yummy:GradientStopCollection>
+
+
+            </yummy:PancakeView.BackgroundGradientStops>
+            
+    
+       
+
+      
+        
+        
+        
+        
+        <ScrollView Orientation="Horizontal" Margin="40,110,0,100"  >
+               
+                    
+                    
+               
+            <StackLayout Orientation="Horizontal" Spacing="50">
+                <yummy:PancakeView CornerRadius="20">
+                        <yummy:PancakeView.BackgroundGradientStops >
+                            <yummy:GradientStopCollection >
+                                <yummy:GradientStop Color="#52c234" Offset="0.0" />
+                                <yummy:GradientStop Color="#061700" Offset="1.0" />
+
+                            </yummy:GradientStopCollection>
+
+
+
+                        </yummy:PancakeView.BackgroundGradientStops>
+
+                       
+
+
+                      
+
+
+
+                    <Frame Padding="0"  HasShadow="True"  Style="{StaticResource Frame_style}"  >
+                    <StackLayout Orientation="Vertical" Spacing="10" Opacity="0.8" Style="{StaticResource StackLayout}">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Solo_Tapped" NumberOfTapsRequired="1" />
+
+                                </StackLayout.GestureRecognizers>
+                        
+                        
+                        <StackLayout Style="{StaticResource Stack_inner}" >
+
+                            <Label Text="Solo Learning"   Style="{StaticResource Title_Label}">
+
+                            </Label>
+
+                        </StackLayout>
+                        <StackLayout Style="{StaticResource Stack_Description}" >
+                            <Label  Text="Stand Alone Learning based on improving indivitualy offline" Style="{StaticResource Body_label}" FontSize="Body" LineBreakMode="WordWrap" >
+
+
+
+                            </Label>
+
+
+                        </StackLayout>
+
+                    </StackLayout>
+                    
+                    
+                    
+                </Frame>
+                </yummy:PancakeView>
+
+
+                <!-- THe second-->
+                <yummy:PancakeView CornerRadius="20">
+                        <yummy:PancakeView.BackgroundGradientStops >
+                            <yummy:GradientStopCollection >
+                                <yummy:GradientStop Color="#780206" Offset="0.0" />
+                                <yummy:GradientStop Color="#061161" Offset="1.0" />
+
+                            </yummy:GradientStopCollection>
+
+
+
+                        </yummy:PancakeView.BackgroundGradientStops>
+
+
+
+                      
+
+
+
+
+
+                    <Frame Padding="0"  HasShadow="True"  Style="{StaticResource Frame_style}" >
+                      
+                        
+                        <StackLayout Orientation="Vertical" Spacing="10" Opacity="0.8" Style="{StaticResource StackLayout}">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Shared_Tapped"  NumberOfTapsRequired="1" />
+
+                                </StackLayout.GestureRecognizers>
+
+
+
+
+                                <StackLayout Style="{StaticResource Stack_inner}">
+
+                                <Label Text="Solo Learning"   Style="{StaticResource Title_Label}">
+
+                                </Label>
+
+                            </StackLayout>
+                            <StackLayout Style="{StaticResource Stack_Description}" >
+                                <Label  Text="Stand Alone Learning based on improving indivitualy offline" Style="{StaticResource Body_label}" FontSize="Body" LineBreakMode="WordWrap" >
+
+
+
+                                </Label>
+
+
+                            </StackLayout>
+
+
+                        </StackLayout>
+
+
+
+                    </Frame>
+
+                </yummy:PancakeView>
+
+
+                <!-- the third-->
+                    <yummy:PancakeView CornerRadius="20">
+                        <yummy:PancakeView.BackgroundGradientStops >
+                            <yummy:GradientStopCollection >
+                                <yummy:GradientStop Color="#e74c3c" Offset="0.0" />
+                                <yummy:GradientStop Color="#000000" Offset="1.0" />
+
+                            </yummy:GradientStopCollection>
+
+
+
+                        </yummy:PancakeView.BackgroundGradientStops>
+
+
+
+
+
+
+                        <Frame Padding="0" HasShadow="True"  Style="{StaticResource Frame_style}" >
+                            <StackLayout Orientation="Vertical" Spacing="10" Opacity="0.8" Style="{StaticResource StackLayout}">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Peer_Tapped"  NumberOfTapsRequired="1" />
+
+                                </StackLayout.GestureRecognizers>
+
+
+                                <StackLayout Style="{StaticResource Stack_inner}" >
+
+                                    <Label Text="Solo Learning"   Style="{StaticResource Title_Label}">
+
+                                    </Label>
+
+                                </StackLayout>
+                                <StackLayout Style="{StaticResource Stack_Description}">
+                                    <Label  Text="Stand Alone Learning based on improving indivitualy offline" Style="{StaticResource Body_label}" FontSize="Body" LineBreakMode="WordWrap" >
+
+
+
+                                    </Label>
+
+
+                                </StackLayout>
+
+                            </StackLayout>
+
+
+
+                        </Frame>
+
+
+                    </yummy:PancakeView>
+
+                </StackLayout>
+
+               
+            </ScrollView>
+
+        </yummy:PancakeView>
+
+    </ContentPage.Content>
+</ContentPage>

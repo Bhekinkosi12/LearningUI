@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             
+                  xmlns:buttons="clr-namespace:Syncfusion.Buttons.XForms.SfChip;assembly=Syncfusion.Buttons.XForms" xmlns:buttons1="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+       
+             mc:Ignorable="d" 
+             x:Class="OwnAndroid.Layout.Present_page">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="buttons1:SfButton" x:Key="Label_Style">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="ShowIcon" Value="True" />
+               
+                <Setter Property="FontSize" Value="30" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="White" />
+                  <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+
+            </Style>
+
+            <Style TargetType="Frame" x:Key="frameCover" >
+                <Setter Property="Padding" Value="0" />
+
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="CornerRadius" Value="10" />
+
+
+            </Style>
+                   
+            
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <yummy:PancakeView BackgroundGradientStartPoint="0.0,0.0" BackgroundGradientEndPoint="1.1,1.1">
+        <yummy:PancakeView.BackgroundGradientStops >
+            <yummy:GradientStopCollection>
+                <yummy:GradientStop Color="White" Offset="0.2" />
+                <yummy:GradientStop Color="WhiteSmoke" Offset="0.3" />
+
+                <yummy:GradientStop Color="LightGray" Offset="0.4" />
+                <yummy:GradientStop Color="DarkGray" Offset="0.5" />
+                <yummy:GradientStop Color="#808080" Offset="0.6" />
+                <yummy:GradientStop Color="#696969" Offset="0.7" />
+                <yummy:GradientStop Color="#585858" Offset="0.8" />
+                <yummy:GradientStop Color="#353535" Offset="1.0" />
+                <yummy:GradientStop Color="#101010" Offset="1.1" />
+
+            </yummy:GradientStopCollection>
+
+
+        </yummy:PancakeView.BackgroundGradientStops>
+
+
+
+        <!--Subjects-->
+        <Frame HasShadow="False" CornerRadius="10" >
+            <ScrollView VerticalScrollBarVisibility="Never"   >
+
+                <StackLayout Orientation="Vertical" Spacing="20" >
+
+
+
+                    <Frame Style="{StaticResource frameCover}" >
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Math_Tapped" NumberOfTapsRequired="1" />
+                        </Frame.GestureRecognizers>
+
+
+                 <yummy:PancakeView  CornerRadius="4" Padding="0" BackgroundGradientStartPoint="0.0,0.0" BackgroundGradientEndPoint="1.0,1.0" >
+                        <yummy:PancakeView.BackgroundGradientStops >
+                            <yummy:GradientStopCollection >
+                                    <yummy:GradientStop Color="#006400" Offset="0.0" />
+                                    <yummy:GradientStop Color="#006400" Offset="1.0" />
+
+                            </yummy:GradientStopCollection>
+                            
+                            
+                            
+                        </yummy:PancakeView.BackgroundGradientStops>
+                     
+
+                       
+
+
+                            <StackLayout Orientation="Vertical" Spacing="0" HeightRequest="80">
+
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Math_Tapped" NumberOfTapsRequired="1" />
+
+                                </StackLayout.GestureRecognizers>
+
+
+
+
+                                <buttons1:SfButton Text="Mathametics" Clicked="Math_Tapped" Style="{StaticResource Label_Style}" />
+
+
+
+                            </StackLayout>
+                       
+
+                    </yummy:PancakeView>
+
+                    </Frame>
+
+                    <!--the second -->
+
+
+                    <Frame Style="{StaticResource frameCover}" >
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LB_Physics_Tapped"  NumberOfTapsRequired="1" />
+                        </Frame.GestureRecognizers>
+
+                        <yummy:PancakeView  CornerRadius="4" Padding="0">
+
+                            <yummy:PancakeView.BackgroundGradientStops >
+                                <yummy:GradientStopCollection >
+                                    <yummy:GradientStop Color="#006400" Offset="0.0" />
+                                    <yummy:GradientStop Color="#006400" Offset="1.0" />
+
+                                </yummy:GradientStopCollection>
+
+
+
+                            </yummy:PancakeView.BackgroundGradientStops>
+
+
+
+
+
+                            <StackLayout Orientation="Vertical" Spacing="0" HeightRequest="80">
+
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="LB_Physics_Tapped" NumberOfTapsRequired="1" />
+
+                                </StackLayout.GestureRecognizers>
+
+
+
+                                <buttons1:SfButton Text="Physical Science" Clicked="LB_Physics_Tapped" Style="{StaticResource Label_Style}" >
+
+
+
+                                </buttons1:SfButton>
+
+
+
+                            </StackLayout>
+
+
+                        </yummy:PancakeView>
+
+
+                    </Frame>
+
+
+                    <!--the third-->
+
+
+
+                    <!--third-->
+
+                    <Frame Style="{StaticResource frameCover}" >
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LB_Accounting_Tapped"  NumberOfTapsRequired="1" />
+                        </Frame.GestureRecognizers>
+
+                        <yummy:PancakeView  CornerRadius="4" Padding="0" >
+                            <yummy:PancakeView.BackgroundGradientStops >
+                                <yummy:GradientStopCollection >
+                                    <yummy:GradientStop Color="#006400" Offset="0.0" />
+                                    <yummy:GradientStop Color="#006400" Offset="1.0" />
+
+                                </yummy:GradientStopCollection>
+
+
+
+                            </yummy:PancakeView.BackgroundGradientStops>
+
+
+
+
+
+                            <StackLayout Orientation="Vertical" Spacing="0" HeightRequest="80">
+
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="LB_Accounting_Tapped" NumberOfTapsRequired="1" />
+
+                                </StackLayout.GestureRecognizers>
+
+
+
+
+                                <buttons1:SfButton Text="Accounting" Clicked="LB_Accounting_Tapped" Style="{StaticResource Label_Style}" >
+
+
+
+                                </buttons1:SfButton>
+
+
+
+                            </StackLayout>
+
+
+                        </yummy:PancakeView>
+
+                    </Frame>
+
+                    <!--fourth-->
+
+                    <Frame Style="{StaticResource frameCover}" >
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LB_Language_Tapped"  NumberOfTapsRequired="1" />
+                        </Frame.GestureRecognizers>
+                        <yummy:PancakeView  CornerRadius="4" Padding="0">
+                            <yummy:PancakeView.BackgroundGradientStops >
+                                <yummy:GradientStopCollection >
+                                    <yummy:GradientStop Color="#006400" Offset="0.0" />
+                                    <yummy:GradientStop Color="#006400" Offset="1.0" />
+
+                                </yummy:GradientStopCollection>
+
+
+
+                            </yummy:PancakeView.BackgroundGradientStops>
+
+
+
+
+                            <StackLayout Orientation="Vertical" Spacing="0" HeightRequest="80">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="LB_Language_Tapped" NumberOfTapsRequired="1" />
+
+                                </StackLayout.GestureRecognizers>
+
+
+
+                                <buttons1:SfButton Text="Languages" Clicked="LB_Language_Tapped" Style="{StaticResource Label_Style}" />
+
+
+
+                            </StackLayout>
+
+
+                        </yummy:PancakeView>
+
+
+
+                    </Frame>
+
+
+                    <!--Fifth -->
+
+                    <Frame Style="{StaticResource frameCover}" >
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LB_CAT_Tapped"  NumberOfTapsRequired="1" />
+                        </Frame.GestureRecognizers>
+
+                        <yummy:PancakeView  CornerRadius="4" Padding="0" >
+                            <yummy:PancakeView.BackgroundGradientStops >
+                                <yummy:GradientStopCollection >
+                                    <yummy:GradientStop Color="#006400" Offset="0.0" />
+                                    <yummy:GradientStop Color="#006400" Offset="1.0" />
+
+                                </yummy:GradientStopCollection>
+
+
+
+                            </yummy:PancakeView.BackgroundGradientStops>
+
+
+
+                            <StackLayout Orientation="Vertical" Spacing="0" HeightRequest="80">
+
+
+
+
+
+                                <buttons1:SfButton Text="Computer " Clicked="LB_CAT_Tapped" Style="{StaticResource Label_Style}" />
+
+
+
+                            </StackLayout>
+
+
+                        </yummy:PancakeView>
+
+                    </Frame>
+
+                    <!-- Life sciences-->
+
+                    <Frame Style="{StaticResource frameCover}" >
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LB_Life_Tapped"  NumberOfTapsRequired="1" />
+                        </Frame.GestureRecognizers>
+
+                        <yummy:PancakeView  CornerRadius="4" Padding="0" >
+                            <yummy:PancakeView.BackgroundGradientStops >
+                                <yummy:GradientStopCollection >
+                                    <yummy:GradientStop Color="#006400" Offset="0.0" />
+                                    <yummy:GradientStop Color="#006400" Offset="1.0" />
+
+                                </yummy:GradientStopCollection>
+
+
+
+                            </yummy:PancakeView.BackgroundGradientStops>
+
+
+
+                            <StackLayout Orientation="Vertical" Spacing="0" HeightRequest="80">
+
+
+
+
+
+                                <buttons1:SfButton Text="Life Sciences" Clicked="LB_Life_Tapped"  Style="{StaticResource Label_Style}" />
+
+
+
+                            </StackLayout>
+
+
+                        </yummy:PancakeView>
+
+                    </Frame>
+
+                </StackLayout>
+
+
+            </ScrollView>
+        </Frame>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </yummy:PancakeView>
+
+
+
+
+</ContentPage>

@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             
+                
+        
+                 xmlns:buttons="clr-namespace:Syncfusion.Buttons.XForms.SfChip;assembly=Syncfusion.Buttons.XForms" xmlns:buttons1="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+        
+             x:Class="OwnAndroid.Layout.Subjects.Questions.Questions_Select_layout">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" >
+            <Frame  Padding="0"  >
+                <yummy:PancakeView BackgroundGradientStartPoint="0.0,0.0" BackgroundGradientEndPoint="1.0,1.0" >
+
+                    <yummy:PancakeView.BackgroundGradientStops>
+                        <yummy:GradientStopCollection>
+                            <yummy:GradientStop Color="Green" Offset="0.0" />
+                            <yummy:GradientStop Color="LightGreen"  Offset="1.0" />
+
+                        </yummy:GradientStopCollection>
+
+
+                    </yummy:PancakeView.BackgroundGradientStops>
+
+
+
+                    <StackLayout Orientation="Horizontal" HeightRequest="50" Margin="10" >
+                        <Label HorizontalOptions="Start" Margin="10" FontSize="15" VerticalOptions="CenterAndExpand" TextColor="Black" >
+                            <Label.FormattedText >
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="1/" />
+                                        <Span Text="3" />
+
+
+                                    </FormattedString.Spans>
+
+
+                                </FormattedString>
+
+
+                            </Label.FormattedText>
+
+
+
+                        </Label>
+
+                        <Label Text="Hint" TextColor="Black" Margin="10" FontSize="15" HorizontalTextAlignment="End" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" />
+
+
+
+
+
+
+
+
+                    </StackLayout>
+                </yummy:PancakeView>
+
+            </Frame>
+
+
+            <Grid RowSpacing="30" >
+                <Grid.RowDefinitions  >
+
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+
+                </Grid.RowDefinitions>
+
+                <Frame Padding="0" Grid.Row="0" Margin="16" CornerRadius="8" BorderColor="Transparent" HasShadow="True">
+
+                    <Label TextColor="Black"  FontSize="17" LineBreakMode="WordWrap" >
+                        <Label.FormattedText>
+                            <FormattedString >
+                                <FormattedString.Spans >
+                                    <Span Text="What Do you call text to be " />
+                                    <Span Text="Displayed " TextColor="Black" FontSize="17" FontAttributes="Bold" />
+                                    <Span Text="On your screen" />
+
+
+
+                                </FormattedString.Spans>
+                                
+                                
+                            </FormattedString>
+                            
+                            
+                        </Label.FormattedText>
+                       
+                        
+                        
+                        
+                    </Label>
+                    
+                    
+                    
+                    
+                </Frame>
+
+                <Frame  Grid.Row="1" Margin="16" Padding="0" BorderColor="Transparent" HasShadow="True">
+
+                    <StackLayout Orientation="Vertical" Spacing="1" >
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+
+                            </Grid.ColumnDefinitions>
+
+                            <buttons1:SfCheckBox IsChecked="False" CheckedColor="Black" WidthRequest="30" HeightRequest="37"  BackgroundColor="Transparent" Grid.Column="0" CornerRadius="16"  x:Name="Check_First" VerticalOptions="CenterAndExpand" />
+
+                            <buttons1:SfButton Text="On screen Display" x:Name="BTN_first_Ans" Clicked="BTN_first_Ans_Clicked" CornerRadius="7"  Grid.Column="1" FontSize="15"  TextColor="Black" HasShadow="True" BackgroundColor="Transparent">
+                               
+                                
+                                
+                            </buttons1:SfButton>
+                            
+
+                        </Grid>
+
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+
+                            </Grid.ColumnDefinitions>
+
+                            <buttons1:SfCheckBox IsChecked="False" CheckedColor="Black" WidthRequest="30" HeightRequest="37"  BackgroundColor="Transparent" Grid.Column="0" CornerRadius="16"  x:Name="Check_Second" VerticalOptions="CenterAndExpand" />
+
+                            <buttons1:SfButton Text="Screen On Displayed" x:Name="BTN_Second_ANS" Clicked="BTN_Second_ANS_Clicked" CornerRadius="7"  Grid.Column="1" FontSize="15"  TextColor="Black" HasShadow="True" BackgroundColor="Transparent">
+
+
+
+                            </buttons1:SfButton>
+
+
+                        </Grid>
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+
+                            </Grid.ColumnDefinitions>
+
+                            <buttons1:SfCheckBox IsChecked="False" CheckedColor="Black" WidthRequest="30" HeightRequest="37"  BackgroundColor="Transparent" Grid.Column="0" CornerRadius="16"  x:Name="Check_Third" VerticalOptions="CenterAndExpand" />
+
+                            <buttons1:SfButton Text="Text on Displayed" CornerRadius="7" x:Name="BTN_Third_ANS" Clicked="BTN_Third_ANS_Clicked"  Grid.Column="1" FontSize="15"  TextColor="Black" HasShadow="True" BackgroundColor="Transparent">
+
+
+
+                            </buttons1:SfButton>
+
+
+                        </Grid>
+
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+
+                            </Grid.ColumnDefinitions>
+
+                            <buttons1:SfCheckBox IsChecked="False" CheckedColor="Black" WidthRequest="30" HeightRequest="37"  BackgroundColor="Transparent" Grid.Column="0" CornerRadius="16"  x:Name="Check_Fourth" VerticalOptions="CenterAndExpand" />
+
+                            <buttons1:SfButton Text=" Displayed Text" CornerRadius="7"  Grid.Column="1" x:Name="BTN_Fouth_ANS" Clicked="BTN_Fouth_ANS_Clicked" FontSize="15"  TextColor="Black" HasShadow="True" BackgroundColor="Transparent">
+
+
+
+                            </buttons1:SfButton>
+
+
+                        </Grid>
+
+
+
+                    </StackLayout>
+                    
+                    
+                    
+                    
+                </Frame>
+                
+                
+                
+            
+                
+                
+                
+                
+                
+                
+                
+                
+            </Grid>
+
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand"  >
+                <Button Text="Submit" HorizontalOptions="EndAndExpand" x:Name="BTN_submit" Clicked="BTN_submit_Clicked" WidthRequest="120" BackgroundColor="Green"  Margin="20" >
+                    
+                </Button>
+                
+            </StackLayout>
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+
+

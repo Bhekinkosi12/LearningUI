@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="OwnAndroid.Layout.Peers.Peer_to_Peer_Present">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+           
+            <Style TargetType="Button" x:Key="button_style" >
+                <Setter Property="BackgroundColor" Value="WhiteSmoke" />
+                <Setter Property="HeightRequest" Value="90" />
+                <Setter Property="CornerRadius" Value="17" />
+                
+
+            </Style>
+            <Style TargetType="Button" x:Key="Skill_style" >
+                <Setter Property="Text" Value="Show Skill" />
+                <Setter Property="BackgroundColor" Value="WhiteSmoke" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BorderColor" Value="Gray" />
+                <Setter Property="BorderWidth" Value="4" />
+
+
+
+            </Style>
+            <Style TargetType="ImageButton" x:Key="Avant_BTN">
+                <Setter Property="HeightRequest" Value="120" />
+                <Setter Property="WidthRequest" Value="80" />
+
+
+            </Style>
+            
+               
+            
+        </ResourceDictionary>
+        
+    </ContentPage.Resources>
+    
+    
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Grid HeightRequest="200" BackgroundColor="White" >
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+
+
+                </Grid.ColumnDefinitions>
+                <ImageButton Source="avatar1.jpg" Aspect="AspectFill" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Style="{StaticResource Avant_BTN}">
+                    <ImageButton.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Avant_One_Tapped" />
+                    </ImageButton.GestureRecognizers>
+                    
+                    
+                </ImageButton>
+
+                <ImageButton Source="avatar1.jpg" Aspect="AspectFill" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Style="{StaticResource Avant_BTN}" >
+                    <ImageButton.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </ImageButton.GestureRecognizers>
+
+
+                </ImageButton>
+
+                <Button x:Name="LBN_Edit" Style="{StaticResource Skill_style}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" />
+                <Button x:Name="LB_Edit" Style="{StaticResource Skill_style}" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2"/>
+
+
+
+            </Grid>
+            
+            
+            <Button Text="Open Learning" WidthRequest="100" Style="{StaticResource button_style}"/>
+            <Button Text="Competition" WidthRequest="120" Style="{StaticResource button_style}"/>
+            <Button Text="Add as Group" WidthRequest="140" Style="{StaticResource button_style}"/>
+            
+
+
+        </StackLayout>
+        
+        
+        
+    </ContentPage.Content>
+</ContentPage>

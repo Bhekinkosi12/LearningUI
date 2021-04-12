@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="OwnAndroid.Layout.Profile_page">
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical">
+            <Image Source="profile_image.jpg" Aspect="AspectFill" HeightRequest="250" />
+            <Frame BackgroundColor="White" CornerRadius="30" HasShadow="False" Margin="0,-50,0,0" >
+                <Grid >
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition  />
+                        <RowDefinition/>
+                        <RowDefinition />
+                        <RowDefinition/>
+                        <RowDefinition/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+
+                    </Grid.ColumnDefinitions>
+                    <!-- Definition -->
+                    <Label x:Name="LB_profile_Name" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" TextColor="Black" Text="Name" FontSize="20" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"/>
+                    <ImageButton x:Name="BTL_profile_facebook" HorizontalOptions="End"  VerticalOptions="End" Source="facebookONE.png" WidthRequest="30" HeightRequest="30" Grid.Column="2" Grid.Row="0"  />
+
+                    <ImageButton x:Name="BTL_profile_whatsapp" HorizontalOptions="Center"  VerticalOptions="End" Source="whatsappONE.png" WidthRequest="30" HeightRequest="30" Grid.Column="2" Grid.Row="0" />
+                    <ImageButton x:Name="BTL_profile_instagram" HorizontalOptions="Start"  VerticalOptions="End" Source="instagramONE.png" WidthRequest="30" HeightRequest="30" Grid.Column="2" Grid.Row="0" />
+
+            
+
+                    <!-- Bio -->
+                    <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Padding="10,0,0,0" >
+                       
+
+                              <Entry Text="  You can edit your bio " IsReadOnly="True"  x:Name="SPAN_bio" FontSize="20" HorizontalOptions="StartAndExpand" />
+
+
+                        <Image Source="edit.png"  Aspect="AspectFill" HorizontalOptions="EndAndExpand" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Edit_bio_Tapped" NumberOfTapsRequired="1" />
+
+                            </Image.GestureRecognizers>
+                            
+                            
+                        </Image>
+
+                       
+                      
+
+                    </StackLayout>
+                   
+
+                    
+                    <!--Statistics-->
+                    
+                    <Label Grid.Row="4" Grid.Column="0" Text="Publication" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                    <Label Grid.Row="4" Grid.Column="1" Text="Followers" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                    <Label Grid.Row="4" Grid.Column="2" Text="Following" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+
+
+                    <Label Grid.Row="5" Grid.Column="0" Text="320" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                    <Label Grid.Row="5" Grid.Column="1" Text="30" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                    <Label Grid.Row="5" Grid.Column="2" Text="3220" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                    
+
+                </Grid>
+                
+                    
+
+
+
+
+            </Frame>
+
+            
+        </StackLayout>
+        
+        
+        
+        
+    </ContentPage.Content>
+</ContentPage>

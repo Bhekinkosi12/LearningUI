@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OwnAndroid.Layout.Sign_Up"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Purple"
+             
+             
+             >
+  
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Entry" x:Key="entry_Style" >
+                <Setter Property="PlaceholderColor" Value="DarkGray" />
+                <Setter Property="TextColor" Value="DarkBlue" />
+
+
+            </Style>
+            
+        </ResourceDictionary>
+        
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+
+        <Grid >
+            <StackLayout Padding="0" Margin="0">
+               
+                    <Image Source="Back_found.jpg" Aspect="AspectFill"  HeightRequest="130" HorizontalOptions="FillAndExpand"/>
+
+         
+
+
+
+            </StackLayout>
+            <StackLayout Margin="15,110,15,0">
+                <Frame BackgroundColor="White" CornerRadius="10" HasShadow="True" HeightRequest="380" HorizontalOptions="FillAndExpand" >
+                    <StackLayout>
+
+
+
+                        <StackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Signin" TextColor="Black" FontSize="Medium" FontAttributes="Bold" />
+
+                        </StackLayout>
+
+                        <ScrollView >
+                            <StackLayout Margin="0,25,0,0" Spacing="9">
+
+                                <!-- Login InPuts-->
+
+                                <Entry Placeholder="Enter Name" x:Name="Entry_Name" Style="{StaticResource entry_Style}" HorizontalOptions="FillAndExpand" Margin="0,0,15,0" />
+
+
+                                <Entry Placeholder="Surname" x:Name="Entry_Surname"  Style="{StaticResource entry_Style}" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" />
+
+
+
+                                <Entry Placeholder="Enter Email " x:Name="Entry_Email" Style="{StaticResource entry_Style}" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" />
+
+
+                                <Entry Placeholder="Enter Id number " x:Name="Entry_ID" Style="{StaticResource entry_Style}" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" />
+
+
+                                
+
+
+                                <!-- -->
+                                <Entry Placeholder="Create Password" x:Name="Entry_password" IsPassword="True" Style="{StaticResource entry_Style}" TextColor="DarkRed" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" />
+
+
+
+                                <!--  -->
+
+                                <Entry Placeholder="Re-enter Password"  IsPassword="True" Style="{StaticResource entry_Style}" TextColor="DarkRed" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" />
+                                
+
+
+
+                            </StackLayout>
+
+                        </ScrollView>
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox IsChecked="False" Color="HotPink" />
+                            <Label Text="Remember me" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+                           
+                        </StackLayout>
+                        <Button Text="SIGN UP" x:Name="Sign_Up_BTN" Clicked="Sign_Up_Clicked"  BackgroundColor="Purple" TextColor="White" FontAttributes="Bold" CornerRadius="20" />
+
+                       
+
+
+
+                    </StackLayout>
+
+
+                </Frame>
+
+
+            </StackLayout>
+
+
+
+        </Grid>
+
+
+
+
+
+    </ContentPage.Content>
+</ContentPage>

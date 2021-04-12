@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+        
+             
+             x:Class="OwnAndroid.Layout.Subjects.Accounting.Accounting_PB">
+    <ContentPage.Content>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="180" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+
+
+
+            </Grid.RowDefinitions>
+
+            <Grid BackgroundColor="#455399" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <StackLayout Margin="0,-40,0,0" HorizontalOptions="Center" VerticalOptions="Center">
+
+                    <Label TextColor="white" FontSize="40" HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Accou" FontSize="40" TextColor="White" FontAttributes="Bold" />
+                                    <Span Text="nting" />
+
+                                </FormattedString.Spans>
+
+
+                            </FormattedString>
+
+                        </Label.FormattedText>
+
+
+                    </Label>
+                    <Label Text="{Binding Sub_subject}" TextColor="White" FontSize="15" HorizontalTextAlignment="Center"/>
+
+
+
+
+                </StackLayout>
+
+
+
+
+
+            </Grid>
+
+
+
+            <CollectionView Grid.Row="2" Margin="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" SelectionMode="None" ItemsSource="{Binding Physics_topics}" >
+                <CollectionView.Header >
+                    <Label Text="Mathematics" TextColor="Black" FontSize="20" />
+
+
+                </CollectionView.Header>
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="20" />
+
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <yummy:PancakeView  BackgroundColor="White" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+
+                            <Grid VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+
+                                </Grid.ColumnDefinitions>
+
+                                <BoxView BackgroundColor="{Binding Color}" WidthRequest="3" HorizontalOptions="Start" VerticalOptions="FillAndExpand" />
+
+                                <Expander Grid.Column="1">
+                                    <Expander.Header>
+                                        <Grid HorizontalOptions="FillAndExpand">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="3.5*" />
+
+                                            </Grid.ColumnDefinitions>
+
+                                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+                                                <Label Text="Topics" TextColor="Black" FontSize="15" />
+                                                <Label Text="{Binding Topic_Number}" HorizontalOptions="Center" VerticalOptions="Center" />
+
+
+                                            </StackLayout>
+
+                                            <BoxView Grid.Column="1" BackgroundColor="#F2F4F8" WidthRequest="1" HorizontalOptions="Start" VerticalOptions="FillAndExpand" />
+                                            <StackLayout Grid.Column="2" HorizontalOptions="Start" VerticalOptions="Center" Margin="20">
+                                                <Label Text="{Binding Topic}" TextColor="Black" FontSize="20" />
+                                            </StackLayout>
+
+
+                                        </Grid>
+
+
+
+                                    </Expander.Header>
+                                    <StackLayout Orientation="Vertical" >
+                                        <Label Text="{Binding Topic_Description}" TextColor="Black" FontSize="16" LineBreakMode="WordWrap" />
+
+                                        <!-- Button-->
+
+                                        <yummy:PancakeView BackgroundGradientStartPoint="0.1,0.4" BackgroundGradientEndPoint="0.8,0.1">
+                                            <yummy:PancakeView.BackgroundGradientStops >
+                                                <yummy:GradientStopCollection>
+                                              
+                                                    <yummy:GradientStop Color="White" Offset="0.1" />
+
+                                             
+                                                    <yummy:GradientStop Color="#808080" Offset="0.4" />
+
+
+                                                </yummy:GradientStopCollection>
+
+
+
+                                            </yummy:PancakeView.BackgroundGradientStops>
+                                            <yummy:PancakeView.Shadow >
+                                                <yummy:DropShadow BlurRadius="5" Opacity="0.7" Color="Gray" />
+
+
+                                            </yummy:PancakeView.Shadow>
+
+                                            <yummy:PancakeView.Border>
+                                                <yummy:Border Color="Black" Thickness="3" />
+
+                                            </yummy:PancakeView.Border>
+
+
+
+
+
+
+
+                                            <Button Text="Start Learning" BackgroundColor="Transparent" FontSize="19" FontAttributes="Bold"  />
+
+                                        </yummy:PancakeView>
+
+
+
+                                    </StackLayout>
+
+
+
+
+
+                                </Expander>
+
+                            </Grid>
+
+                        </yummy:PancakeView>
+
+
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+
+            </CollectionView>
+
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

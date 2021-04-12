@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+ xmlns:buttons="clr-namespace:Syncfusion.Buttons.XForms.SfChip;assembly=Syncfusion.Buttons.XForms" xmlns:buttons1="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+         
+             
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             x:Class="OwnAndroid.Layout.Subjects.Maths.Learnig_math_intro"
+             BackgroundColor="White"
+             >
+  
+
+
+    <ContentPage.Content>
+
+
+
+        <StackLayout Orientation="Vertical" >
+            <Frame Padding="0" HeightRequest="110"   BorderColor="LightGray" HasShadow="True" >
+
+                <yummy:PancakeView BackgroundGradientStartPoint="0.0,0.0" BackgroundGradientEndPoint="1.0,1.0" >
+                    <yummy:PancakeView.BackgroundGradientStops>
+                    <yummy:GradientStopCollection >
+                            <yummy:GradientStop Color="#8e2de2" Offset="0.1" />
+                            <yummy:GradientStop Color="#4a00e0" Offset="1.0" />
+
+
+                    </yummy:GradientStopCollection>
+
+                    </yummy:PancakeView.BackgroundGradientStops>
+
+
+
+
+                    <Label TextColor="WhiteSmoke" HorizontalOptions="CenterAndExpand" FontSize="40" VerticalOptions="CenterAndExpand" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Intro" TextColor="White" FontSize="40" />
+                                <Span Text="duc"  />
+                                <Span Text="tions" TextColor="White" FontSize="40"   />
+
+
+                            </FormattedString>
+
+
+                        </Label.FormattedText>
+
+
+
+                    </Label>
+
+
+                </yummy:PancakeView>
+
+
+            </Frame>
+            <border:SfBorder BorderColor="LightGray" BorderWidth="1" ShadowColor="Black" HasShadow="True"   Margin="20,10,30,0" CornerRadius="0,20,20,20"   >
+
+                <yummy:PancakeView BackgroundGradientStartPoint="0.0,0.0" BackgroundGradientEndPoint="1.0,1.0">
+                    <yummy:PancakeView.BackgroundGradientStops >
+                        <yummy:GradientStopCollection >
+                            <yummy:GradientStop Color="#8e2de2" Offset="0.0" />
+                            <yummy:GradientStop Color="#4a00e0" Offset="1.0" />
+
+
+                        </yummy:GradientStopCollection>
+
+
+                    </yummy:PancakeView.BackgroundGradientStops>
+
+
+                    <Frame HeightRequest="330" IsVisible="True" BackgroundColor="Transparent"  Margin="10,10,20,0" >
+
+                      
+                        
+                 
+                
+                
+                    <StackLayout Orientation="Vertical" Spacing="20" >
+                        <Label Text="Description" TextColor="White" FontSize="26" />
+
+                        <Label Text="This is the instuctions that will be presented to the user" TextColor="White" FontSize="19" />
+
+
+                        <border:SfBorder BorderWidth="0" CornerRadius="6" VerticalOptions="EndAndExpand"  >
+                            <buttons1:SfButton WidthRequest="120" Text="Continue" BackgroundColor="#992be2"  />
+
+
+                        </border:SfBorder>
+
+                        
+                    </StackLayout>
+                    
+
+
+
+                </Frame>
+                </yummy:PancakeView>
+
+            </border:SfBorder>
+
+          
+
+
+            
+            
+
+        </StackLayout>
+            
+            
+            
+            
+            
+    </ContentPage.Content>
+</ContentPage>

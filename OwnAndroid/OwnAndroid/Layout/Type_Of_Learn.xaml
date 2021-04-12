@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="OwnAndroid.Layout.Type_Of_Learn">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Frame" x:Key="frame_style" >
+                <Setter  Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="BorderColor" Value="White" />
+
+            </Style>
+            
+        </ResourceDictionary>
+        
+    </ContentPage.Resources>
+    
+    
+    <ContentPage.Content>
+
+        <ScrollView VerticalScrollBarVisibility="Never" Orientation="Horizontal">
+
+            <StackLayout Orientation="Horizontal" Spacing="30" HeightRequest="190" WidthRequest="190" >
+
+
+                <Frame HasShadow="True" BackgroundColor="LightGray"  BorderColor="DarkGray" HeightRequest="190" WidthRequest="190" >
+                    <Grid  HeightRequest="190" WidthRequest="190">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Solo_learining_Tapped" NumberOfTapsRequired="1" />
+
+                        </Grid.GestureRecognizers>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+
+
+
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+
+
+                        </Grid.ColumnDefinitions>
+
+                        <!--Background Image-->
+                        <Image Source="Solo_learning.png" Aspect="AspectFill" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="8" />
+
+                        <!-- The context-->
+
+                        <Label Text="Offline" HorizontalOptions="Center" Grid.Column="3" Grid.Row="0" FontSize="16" FontAttributes="Bold" BackgroundColor="Black" TextColor="White">
+
+
+
+                        </Label>
+                        <Label Text="Solo Learning" FontSize="39" TextColor="Black" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+
+
+
+
+
+
+
+
+
+
+                    </Grid>
+
+
+                </Frame> 
+                 
+
+
+                <!--Second Learning type-->
+                <Frame HasShadow="True" BackgroundColor="LightGray"  BorderColor="DarkGray" HeightRequest="190" WidthRequest="190" >
+
+
+                    <Grid BackgroundColor="Silver" HeightRequest="190" WidthRequest="190">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+
+
+
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+
+
+                        </Grid.ColumnDefinitions>
+
+                        <!--Background image -->
+
+                        <Image Source="online_learning.png" Aspect="AspectFill" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="8" />
+
+                        <!-- The context-->
+
+                        <Label Text="Online" HorizontalOptions="Center" Grid.Column="3" Grid.Row="0" FontSize="16" FontAttributes="Bold" BackgroundColor="Black" TextColor="White">
+
+
+
+                        </Label>
+                        <Label Text="Online Learning" FontSize="39" TextColor="Black" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+
+
+
+
+
+
+
+
+                    </Grid>
+                </Frame>
+
+                <!--third Learning type-->
+
+                <Frame HasShadow="True" BackgroundColor="LightGray"  BorderColor="DarkGray" HeightRequest="190" WidthRequest="190" >
+
+                    <Grid BackgroundColor="Silver" HeightRequest="190" WidthRequest="190" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+
+
+
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+
+
+                        </Grid.ColumnDefinitions>
+
+
+                        <!--Background image -->
+
+                        <Image Source="Group_learning.png" Aspect="AspectFill" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="8" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Peer_to_Peer_Tapped" NumberOfTapsRequired="1" />
+
+                            </Image.GestureRecognizers>
+
+
+                        </Image>
+
+
+
+                        <!-- The context-->
+
+                        <Label Text="Online" HorizontalOptions="Center"  Grid.Column="3" Grid.Row="0" FontSize="16" FontAttributes="Bold" BackgroundColor="Black" TextColor="White">
+
+
+
+                        </Label>
+                        <Label Text="Peer to Peer Learning" FontSize="39" FontAttributes="Bold" TextColor="Black" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center">
+
+
+                        </Label>
+
+
+
+
+
+
+
+
+                    </Grid>
+                </Frame>
+
+
+
+
+
+            </StackLayout>
+
+
+                   
+
+
+        </ScrollView>
+
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="OwnAndroid.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             >
+
+
+    <Frame BorderColor="LightGray" HasShadow="True" CornerRadius="21" >
+
+
+      
+        
+        
+
+        <!-- Place new controls here -->
+
+        <StackLayout x:Name="Stack_login" Orientation="Vertical" Spacing="6"  >
+
+
+
+
+
+            <Label x:Name="LB_wecome"  >
+
+
+            </Label>
+            <StackLayout x:Name="Stack_login_second">
+                <Label x:Name="LB_login" >
+
+
+                </Label>
+                <Entry x:Name="ENTRY_username" >
+
+
+                </Entry>
+
+                <Label x:Name="LB_password" >
+
+
+                </Label>
+
+                <Entry x:Name="ENTRY_password" />
+
+
+                <Button x:Name="BTN_submit" Clicked="BTN_submit_Clicked"  >
+
+                </Button>
+                <Label x:Name="LB_signup" >
+
+                </Label>
+
+            </StackLayout>
+
+
+        </StackLayout>
+
+
+
+    </Frame>
+</ContentPage>

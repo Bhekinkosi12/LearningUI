@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xamarinforms:BottomBarPage  xmlns:xamarinforms="clr-namespace:BottomBar.XamarinForms;assembly=BottomBar.XamarinForms" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:layout="clr-namespace:OwnAndroid.Layout"
+              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:layout1="clr-namespace:OwnAndroid.Layout.Subjects.Maths"
+                             mc:Ignorable="d"
+            BackgroundColor="DarkBlue"
+            
+            NavigationPage.HasNavigationBar="False"
+                     xamarinforms:BarBackgroundColor="White"        
+                    xamarinforms:BottomBarPageExtensions.TabColor="DarkBlue"   
+             x:Class="OwnAndroid.TabbedPage1">
+
+ 
+
+
+    <xamarinforms:BottomBarPage.Children>
+        <layout:Side_Tyle_of_Learn  IconImageSource="catalog.png"  xamarinforms:BottomBarPageExtensions.TabColor="Blue" />
+        <layout:Profile_page  IconImageSource="people.png" xamarinforms:BottomBarPageExtensions.TabColor="DarkBlue"/>
+        <layout1:Learning_Demo  IconImageSource="cog.png"  xamarinforms:BottomBarPageExtensions.TabColor="Blue"/>
+
+
+    </xamarinforms:BottomBarPage.Children>
+
+
+
+    <!--Pages can be added as references or inline-->
+   
+</xamarinforms:BottomBarPage>
