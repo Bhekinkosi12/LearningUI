@@ -24,7 +24,7 @@
             </Style>
 
             <Style TargetType="Frame" x:Key="frameCover" >
-                <Setter Property="Padding" Value="0" />
+                <Setter Property="Padding" Value="5" />
 
                 <Setter Property="BackgroundColor" Value="Transparent" />
                 <Setter Property="CornerRadius" Value="10" />
